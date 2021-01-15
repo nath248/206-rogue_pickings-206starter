@@ -7,7 +7,7 @@ body {
   justify-content: center;
   align-items: center;
 	font-size: 1em;
-	flex-flow: row wrap;
+	flex-flow: column wrap;
 }
 
 .container{
@@ -17,7 +17,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-flow: row wrap;
+	flex-flow: column wrap;
 }
 
 h1,
@@ -45,17 +45,18 @@ p {
 
 /*The widths are in a percentage!*/
 header {
-	border-bottom: 3px solid #77a466;
 	margin: 0 auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-flow: row wrap;
+	flex-flow: column wrap;
 }
 
 header h1 {
 	margin: 0;
+	width: 100%;
 	padding: 38px 0;
+	border-bottom: 3px solid #77a466;
 }
 header h1 span {
 	color: #77a466;
@@ -73,7 +74,10 @@ header nav ul li {
 	font-weight: 700;
 	font-size: 0.875em;
 	padding: 0 10px;
-	display: inline;
+	display: flex;
+	justify-content: center;
+	line-height: 50px;
+	text-align: center;
 }
 header nav ul li a{
 	text-decoration: none;
@@ -87,7 +91,7 @@ header nav ul li a{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-flow: row wrap;
+	flex-flow: column wrap;
 }
 
 .main-image {
@@ -95,6 +99,7 @@ header nav ul li a{
 }
 .main-image img {
 	width: 100%;
+	border-top: 3px solid #77a466;
 	border-bottom: 3px solid #77a466;
 }
 
@@ -118,6 +123,9 @@ header nav ul li a{
 	width: 33%;
 	height: auto;
 	border-top: 1px solid #eee;
+	justify-content: center;
+	align-items: center;
+	display: flow-root;
 }
 
 .section-one h3 {
@@ -125,8 +133,8 @@ header nav ul li a{
 }
 
 .section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
 }
 
 .section-two h3,
@@ -162,11 +170,34 @@ footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-flow: row wrap;
+	flex-flow: column wrap;
 }
 footer span {
 	font-family: 'Galada', cursive;
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 0.875em;
+}
+
+@media all and (min-width:768px) {
+	bottom-section {
+		flex-basis: 768px;
+		border-top: auto solid black;
+	}
+	section-one {
+		flex-basis: 256px;
+	}
+	section-two {
+		flex-basis: 256px;
+		border: auto solid black;
+	}
+	section-three {
+		flex-basis: 256px;
+	}
+
+}
+
+@media all and (min-width:1200px) {
+    /* Desktop styles here */
+
 }
