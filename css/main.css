@@ -120,7 +120,7 @@ header nav ul li a{
 .section-one,
 .section-two,
 .section-three {
-	width: 33%;
+	width: 100%;
 	height: auto;
 	border-top: 1px solid #eee;
 	justify-content: center;
@@ -170,7 +170,8 @@ footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-flow: column wrap;
+	width: 100%;
+	flex-direction: row;
 }
 footer span {
 	font-family: 'Galada', cursive;
@@ -180,19 +181,21 @@ footer span {
 }
 
 @media all and (min-width:768px) {
+	top-section, bottom-section {
+		flex-flow: row wrap;
+	}
 	bottom-section {
-		flex-basis: 768px;
 		border-top: auto solid black;
 	}
-	section-one {
-		flex-basis: 256px;
+	.section-one {
+		width: 33%;
 	}
-	section-two {
-		flex-basis: 256px;
+	.section-two {
+		width: 33%;
 		border: auto solid black;
 	}
-	section-three {
-		flex-basis: 256px;
+	.section-three {
+		width: 33%;
 	}
 
 }
