@@ -45,11 +45,13 @@ p {
 
 /*The widths are in a percentage!*/
 header {
+	width: 100%;
 	margin: 0 auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-flow: column wrap;
+	text-align: center;
 }
 
 header h1 {
@@ -181,26 +183,47 @@ footer span {
 }
 
 @media all and (min-width:768px) {
-	top-section, bottom-section {
+	.top-section,
+	.bottom-section {
+		width: 100%;
+		display: flex;
 		flex-flow: row wrap;
+		justify-content: center;
+		align-items: stretch;
 	}
-	bottom-section {
-		border-top: auto solid black;
+	.bottom-section {
+		border-top: 1px solid #eee;
 	}
 	.section-one {
 		width: 33%;
 	}
 	.section-two {
 		width: 33%;
-		border: auto solid black;
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
 	}
 	.section-three {
 		width: 33%;
 	}
-
 }
 
 @media all and (min-width:1200px) {
-    /* Desktop styles here */
-
+	header {
+		width: 100%;
+		margin: 0 auto;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	header nav ul {
+		width: 40%;
+		display: flex;
+	}
+  header h1 {
+    width: 60%;
+    padding: 50px 0;
+    border-bottom: none;
+    text-align: left;
+  }
 }
